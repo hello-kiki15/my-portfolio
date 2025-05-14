@@ -4,7 +4,7 @@ import React from 'react';
 const projects = [
   {
     title: 'Newari Feast and Festivals',
-    image: '/images/newafestFigma.png', // save in public/images/
+    image: '/images/newafestFigma.png', 
     link: 'https://www.figma.com/file/yourfigmalink1',
     tags: ['UX Design', 'Mobile App'],
   },
