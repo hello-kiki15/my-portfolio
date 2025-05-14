@@ -1,11 +1,23 @@
+// Home.js
 import React from 'react';
 
 const Home = () => {
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section id="home">
-      <h1>Hi, I'm [Your Name]</h1>
-      <p>Welcome to my portfolio!</p>
-      <img src="path-to-your-photo.jpg" alt="Your Photo" />
+    <section className="home">
+      <div className="home-content">
+        <h1>Welcome!</h1>
+        <p>I'm glad you're here. Let's get to know me better.</p>
+        <button className="home-btn" onClick={scrollToAbout}>
+          About Me ↓
+        </button>
+      </div>
     </section>
   );
 };
