@@ -1,22 +1,35 @@
-// About.js (React Component)
 import React from 'react';
 
 const About = () => {
   return (
-    <section className="about" id="about">
-      <div className="about-container">
-        <div className="about-image">
-          <img src="/path/to/your-photo.jpg" alt="Your Name" />
+    <section id="about" className="about centered-about">
+      <h2 className="about-title">Hi, I’m Krisha Maharjan</h2>
+      <p className="about-subtitle">A frontend enthusiast who believes in clean code, beautiful UI, and human-focused design.</p>
+
+      <div className="mini-cards">
+        <div className="mini-card">
+          <span>💡</span>
+          <h3>Creative Thinker</h3>
+          <p>I love transforming rough ideas into real experiences.</p>
         </div>
-        <div className="about-content">
-          <h2 className="about-title">About Me</h2>
-          <p className="about-text">
-            Hi, I'm [Your Name], a passionate <span className="highlight">Web Developer</span> and <span className="highlight">UX/UI Designer</span> based in [Your Location]. With a strong background in front-end development, I specialize in creating beautiful and functional user interfaces. 
-            I'm always excited to learn new technologies and find creative solutions to design challenges. Outside of coding, I love [Your Hobbies/Interests] and enjoy collaborating on exciting projects!
-          </p>
-          <a href="#contact" className="about-btn">Let's Connect</a>
+
+        <div className="mini-card">
+          <span>📚</span>
+          <h3>Lifelong Learner</h3>
+          <p>I’m always exploring — design systems, new libraries, or UX trends.</p>
+        </div>
+
+        <div className="mini-card">
+          <span>💻</span>
+          <h3>Code Lover</h3>
+          <p>React is my playground, and good UI is my language.</p>
         </div>
       </div>
+
+      <div className="glass-quote">
+        <p>"Pixels matter. People matter more."</p>
+      </div>
+
     </section>
   );
 };
