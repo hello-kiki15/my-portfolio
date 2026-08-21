@@ -94,18 +94,6 @@ const About = () => {
             </motion.div>
           ))}
         </div>
-
-        <motion.blockquote
-          className="border-l-2 border-accent pl-6 mt-16 max-w-lg"
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-        >
-          <p className="font-display italic text-ink text-xl leading-relaxed">
-            "Good design is invisible, but its impact is unforgettable."
-          </p>
-        </motion.blockquote>
       </div>
     </section>
   );
