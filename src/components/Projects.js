@@ -1,54 +1,94 @@
+import { motion } from "motion/react";
+import { FaGithub } from "react-icons/fa";
+
+const projects = [
+  {
+    title: "Production Mobile Applications",
+    desc: "Contributed to multiple production mobile applications, including digital wallet, e-commerce, and healthcare applications, using React Native and TypeScript. Worked on responsive UI, navigation, API integration, and application workflows.",
+  },
+  {
+    title: "Pneumonia Detection Web Application",
+    desc: "Developed a responsive React.js interface for uploading medical images and displaying pneumonia classification results through API integration.",
+  },
+  {
+    title: "Portfolio Website",
+    desc: "Designed and developed a responsive personal portfolio using React.js, focusing on reusable components, responsive layouts, and clean user experience.",
+  },
+];
+
 const Projects = () => {
   return (
-    <section className="projects" id="projects">
-      <h2 className="projects-title">My Creative Work</h2>
+    <section id="projects" className="bg-paper-soft py-28 px-6">
+      <div className="max-w-5xl mx-auto">
+        <motion.span
+          className="kicker"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          Projects
+        </motion.span>
 
-      <p className="projects-intro">
-        Throughout my academic journey, I've worked on multiple diverse projects that reflect both my technical skills and creativity. 
-        Here are some of the projects I've developed:
-      </p>
+        <motion.h2
+          className="font-display text-ink text-4xl md:text-5xl font-medium mt-5 mb-4"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.05 }}
+        >
+          Selected work
+        </motion.h2>
 
-      <div className="project-cards">
-        <div className="project-card">
-          <h3>Hotel Booking and Management System</h3>
-          <p>
-            Built using <strong>Java</strong>, this project includes form input handling and validation. 
-            Emphasized user interaction logic and usability testing.
-          </p>
+        <motion.p
+          className="text-ink-soft text-lg max-w-xl mb-14"
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
+          From production mobile applications to web projects, I enjoy
+          building responsive interfaces and turning ideas into functional
+          user experiences.
+        </motion.p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-14">
+          {projects.map((project, i) => (
+            <motion.div
+              key={project.title}
+              className="border border-line rounded-lg p-7 bg-paper hover:border-accent hover:-translate-y-1 transition-all duration-300 text-left"
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+            >
+              <h3 className="font-display text-ink text-xl font-medium mb-3">
+                {project.title}
+              </h3>
+              <p className="text-ink-soft text-sm leading-relaxed">
+                {project.desc}
+              </p>
+            </motion.div>
+          ))}
         </div>
 
-        <div className="project-card">
-          <h3>Taxi Booking System</h3>
-          <p>
-            A <strong>Python</strong>-based functional booking system with edge-case handling and basic UI validation 
-            to ensure consistent user input.
-          </p>
-        </div>
-
-        <div className="project-card">
-          <h3>To-Do List Web App</h3>
-          <p>
-            Developed with <strong>React.js</strong>, featuring a clean and mobile-friendly UI, interactive task handling, 
-            and responsive design manually tested across devices.
-          </p>
-        </div>
-
-        <div className="project-card">
-          <h3>Mobile Application</h3>
-          <p>
-            Created a cross-platform app using <strong>Flutter</strong>, offering a responsive and feature-rich user experience. 
-            Performed layout and feature usability tests on Android devices.
-          </p>
-        </div>
-      </div>
-
-      <div className="external-links">
-        <a className="fancy-btn github" href="https://github.com/hello-kiki15" target="_blank" rel="noopener noreferrer">
-          View My GitHub
-        </a>
-        <a className="fancy-btn figma" href="https://www.figma.com/design/ybVc1EH3fAqwOivTJXD5gL/Newari-Feast-and-Festivals?node-id=0-1&t=QLoESsGZ3rcMGsWc-1" target="_blank" rel="noopener noreferrer">
-          View My Figma Designs
-        </a>
+        <motion.div
+          className="flex justify-center"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          <a
+            href="https://github.com/hello-kiki15"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono text-xs tracking-widest uppercase inline-flex items-center gap-2 border border-line rounded-full px-6 py-3 text-ink hover:border-accent hover:text-accent transition-colors duration-300"
+          >
+            <FaGithub className="text-sm" />
+            View my GitHub
+          </a>
+        </motion.div>
       </div>
     </section>
   );
